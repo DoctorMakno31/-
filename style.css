@@ -22,3 +22,17 @@ table
 width: 800px;
 border: 1px solid blue;
 }
+
+.link {
+    color: #000000;
+    transition: all 0.3s ease;
+  }
+  
+.link:hover {
+    font-size: 20px;
+  }
+
+
+  
+  
+    

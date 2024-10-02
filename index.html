@@ -215,77 +215,42 @@
         </tr>
     </table>
 
-
+    <p><button class="link" onclick="CheckResult()">Проверка</button></p>
+    
     <p>Разработчик:
        Илюшкин Максим
     </p>
 
-</body>
 
-<body>
-    <button onclick="CheckResult()">Завершить</button>
+    <script>
+        function CheckResult()
+        {
+            let answers=['МММРР','БААВБ','2','2','163','82','311211','BCAABA'];
+           
+            let questions=8;
+            let score=0;
+            for(let i=1;i<=answers.length;i++)
+        {
+            let q = document.getElementById('q'+i);
+            let a = document.getElementById('a'+i);
+            if (a.value == answers[i-1]) {
+                q.style.border = '1px solid green ';
+                score++;
+            }
+            else {
+                q.style.border = '1px solid red';
+            }
+        }
+
+        alert("Ваша оценка:" +parseInt(score/1.6))
+        score=0
+
+        }
+
+    </script>
+
 </body>
 
 </head>
 </html>
 
-<script>
-  
-          function CheckResult()
-            {
-           var result= 0
-           let q1 = document.getElementById('q1');
-           let a1 = document.getElementById('a1');
-           if (a1.value == 'МММРР') 
-           {
-               ++result;
-           }
-
-           let q2 = document.getElementById('q2');
-           let a2 = document.getElementById('a2');
-           if (a2.value == 'БААВБ') {
-               ++result;
-           }
- 
-           let q3 = document.getElementById('q3');
-           let a3 = document.getElementById('a3');
-           if (a3.value == '2') {
-               ++result;
-           }
-
-           let q4 = document.getElementById('q4');
-           let a4 = document.getElementById('a4');
-           if (a4.value == '2') {
-               ++result;
-           }
- 
-           let q5 = document.getElementById('q5');
-           let a5 = document.getElementById('a5');
-           if (a5.value == '163') {
-               ++result;
-           }
-
-           let q6 = document.getElementById('q6');
-           let a6 = document.getElementById('a6');
-           if (a6.value == '82') {
-               ++result;
-           }
-
-           let q7 = document.getElementById('q7');
-           let a7 = document.getElementById('a7');
-           if (a7.value == '311211') {
-               ++result;
-           }
- 
-           let q8 = document.getElementById('q8');
-           let a8 = document.getElementById('a8');
-           if (a8.value == 'BCAABA') {
-               ++result;
-           }
-
-           alert("Ваша оценка:" +parseInt(result/1.6))
-           result=0
-       }
-
-
-</script>
